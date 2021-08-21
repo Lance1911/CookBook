@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsFragment"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/edamamLogo"
+            android:layout_width="260dp"
+            android:layout_height="62dp"
+            android:translationX="3dp"
+            android:translationY="-3425dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recTitle"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/recipeLink"
+            android:layout_width="308dp"
+            android:layout_height="51dp"
+            android:fontFamily="sans-serif-light"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:translationY="-4115dp"
+            app:layout_constraintBottom_toTopOf="@+id/edamamLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+        <TextView
+            android:id="@+id/recTitle"
+            android:layout_width="370dp"
+            android:layout_height="90dp"
+            android:ellipsize="none"
+            android:fontFamily="sans-serif-light"
+            android:scrollHorizontally="false"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:translationY="-2590dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/recPicture"
+            android:layout_width="365dp"
+            android:layout_height="217dp"
+            android:translationX="3dp"
+            android:translationY="-3760dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recTitle"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/ingredients"
+            android:layout_width="319dp"
+            android:layout_height="1083dp"
+            android:padding="20dp"
+            android:text="TextView"
+            android:textSize="16sp"
+            android:translationY="-3400dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recPicture" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Ingredients:"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:translationY="-3425dp"
+            app:layout_constraintBottom_toTopOf="@+id/ingredients"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recPicture" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:foregroundGravity="center"
+            android:translationY="-3740dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recPicture" />
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:foregroundGravity="center"
+            android:translationY="-4600dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ingredients" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="308dp"
+            android:layout_height="51dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Recipe Link:"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:translationY="-4850dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

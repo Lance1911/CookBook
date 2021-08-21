@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <CheckBox
+            android:id="@+id/peanut_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Peanut-Free"
+            android:translationY="-375dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/soy_free"
+            app:layout_constraintVertical_bias="0.589" />
+
+        <CheckBox
+            android:id="@+id/shellfish_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Shellfish-Free"
+            android:translationY="-145dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fish_free"
+            app:layout_constraintVertical_bias="0.207" />
+
+        <CheckBox
+            android:id="@+id/fish_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Fish-Free"
+            android:translationY="-80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dairy_free"
+            app:layout_constraintVertical_bias="0.139" />
+
+        <CheckBox
+            android:id="@+id/keto_friendly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Keto-Friendly"
+            android:translationY="-80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fish_free"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <CheckBox
+            android:id="@+id/soy_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Soy-Free"
+            android:translationY="-205dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fish_free"
+            app:layout_constraintVertical_bias="0.4" />
+
+        <CheckBox
+            android:id="@+id/treenut_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tree-Nut-Free"
+            android:textSize="12sp"
+            android:translationY="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/soy_free"
+            app:layout_constraintStart_toStartOf="@+id/kosher"
+            app:layout_constraintTop_toBottomOf="@+id/kosher"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <CheckBox
+            android:id="@+id/kosher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:text="Kosher"
+            android:translationY="40dp"
+            app:layout_constraintStart_toEndOf="@+id/keto_friendly"
+            app:layout_constraintStart_toStartOf="@+id/pork_free"
+            app:layout_constraintTop_toBottomOf="@+id/gluten_free" />
+
+        <CheckBox
+            android:id="@+id/pork_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Pork-Free"
+            android:translationY="40dp"
+            app:layout_constraintStart_toEndOf="@+id/keto_friendly"
+            app:layout_constraintStart_toStartOf="@+id/gluten_free"
+            app:layout_constraintTop_toBottomOf="@+id/gluten_free" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1200dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Find Recipes For:"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.118" />
+
+        <CheckBox
+            android:id="@+id/breakfast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Breakfast"
+            android:translationX="-5dp"
+            android:translationY="-25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/dinner"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintVertical_bias="0.04" />
+
+        <CheckBox
+            android:id="@+id/lunch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lunch"
+            android:translationY="-25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.343"
+            app:layout_constraintStart_toEndOf="@+id/breakfast"
+            app:layout_constraintTop_toTopOf="@+id/breakfast" />
+
+        <CheckBox
+            android:id="@+id/dinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:text="Dinner"
+            android:translationY="-25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/breakfast"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <CheckBox
+            android:id="@+id/snack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Snack"
+            android:translationY="-25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/dinner"
+            app:layout_constraintStart_toEndOf="@+id/dinner"
+            app:layout_constraintStart_toStartOf="@+id/lunch" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Dietary Restrictions:"
+            android:textSize="24sp"
+            android:translationY="-20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dinner"
+            app:layout_constraintVertical_bias="0.068" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:background="?android:attr/listDivider"
+            android:translationY="-20dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dinner"
+            app:layout_constraintVertical_bias="0.573" />
+
+        <CheckBox
+            android:id="@+id/highProtein"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High-Protein"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <CheckBox
+            android:id="@+id/lowSodium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low-Sodium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lowCarb"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <CheckBox
+            android:id="@+id/lowCarb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low-Carb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/highProtein"
+            app:layout_constraintVertical_bias="0.003" />
+
+        <CheckBox
+            android:id="@+id/lowFat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:text="Low-Fat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/highProtein"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <CheckBox
+            android:id="@+id/highFiber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High-Fiber"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView9"
+            app:layout_constraintStart_toEndOf="@+id/highProtein"
+            app:layout_constraintStart_toStartOf="@+id/lowFat"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            app:layout_constraintVertical_bias="0.541" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:background="?android:attr/listDivider"
+            android:translationX="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lowSodium"
+            app:layout_constraintVertical_bias="0.045" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Allergy and Further Dietary Restrictions"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2"
+            app:layout_constraintVertical_bias="0.031" />
+
+        <CheckBox
+            android:id="@+id/alcohol_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Non-Alcoholic"
+            android:translationY="-20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            app:layout_constraintVertical_bias="0.096" />
+
+        <CheckBox
+            android:id="@+id/dairy_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Non-Dairy"
+            android:translationY="-30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/alcohol_free"
+            app:layout_constraintVertical_bias="0.08" />
+
+        <CheckBox
+            android:id="@+id/crustacean_free"
+            android:layout_width="94dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="28dp"
+            android:text="Crustacean-Free"
+            android:textSize="12sp"
+            android:translationY="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/alcohol_free"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <CheckBox
+            android:id="@+id/egg_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Egg-Free"
+            android:translationY="40dp"
+            app:layout_constraintStart_toEndOf="@+id/dairy_free"
+            app:layout_constraintStart_toStartOf="@+id/crustacean_free"
+            app:layout_constraintTop_toBottomOf="@+id/crustacean_free" />
+
+        <CheckBox
+            android:id="@+id/gluten_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Gluten-Free"
+            android:translationY="40dp"
+            app:layout_constraintStart_toStartOf="@+id/egg_free"
+            app:layout_constraintTop_toBottomOf="@+id/egg_free" />
+
+        <TextView
+            android:id="@+id/keytext"
+            android:layout_width="307dp"
+            android:layout_height="47dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Keyword Search"
+            android:textSize="24sp"
+            android:translationY="-350dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/peanut_free"
+            app:layout_constraintVertical_bias="0.163" />
+
+        <Button
+            android:id="@+id/beginSearch"
+            android:layout_width="214dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="5dp"
+            android:text="Begin Search"
+            android:translationY="-200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.416"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/foodQuery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="ie. Chicken"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:translationY="-300dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/keytext" />
+
+        <ImageView
+            android:id="@+id/apiseal"
+            android:layout_width="314dp"
+            android:layout_height="54dp"
+            android:translationX="0dp"
+            android:translationY="-80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.374"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/beginSearch"
+            app:layout_constraintVertical_bias="0.937"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

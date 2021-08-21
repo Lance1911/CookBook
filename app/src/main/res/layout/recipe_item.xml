@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="345dp"
+        android:layout_height="225dp"
+        android:translationX="30dp"
+        android:translationY="20dp"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="325dp"
+            android:layout_height="130dp"
+            android:translationX="10dp"
+            android:translationY="10dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/recipeName"
+            android:layout_width="331dp"
+            android:layout_height="66dp"
+            android:fontFamily="sans-serif-light"
+            android:text="TextView"
+            android:translationX="7dp"
+            android:translationY="155dp" />
+    </androidx.cardview.widget.CardView>
+</androidx.cardview.widget.CardView>
