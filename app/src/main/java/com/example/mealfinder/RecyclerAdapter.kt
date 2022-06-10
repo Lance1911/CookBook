@@ -47,7 +47,7 @@ class RecyclerAdapter(private val newList: ArrayList<RecipeItem>, private val li
     override fun onBindViewHolder(holder: RecyclerAdapter.recyclerViewHolder, position: Int) {
         val currentItem = newList[position]
         holder.recName.text = currentItem.recipeName
-        Picasso.get().load(currentItem.picture).resize(3000,1500).into(holder.image)
+        Picasso.get().load(currentItem.picture).fit().centerCrop().into(holder.image)
     }
 
     override fun getItemCount(): Int {

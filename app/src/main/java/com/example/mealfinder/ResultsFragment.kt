@@ -35,6 +35,7 @@ class ResultsFragment: Fragment(R.layout.results_fragment), RecyclerAdapter.onRe
                 mvm.getRecipeHolder()?.get(i)?.recipe?.label!!))
         }
 
+        SearchResults.text = "Search Results for \"" + mvm.getSearch() + "\""
         recyclerView.adapter = RecyclerAdapter(recyclerList, this)
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.setHasFixedSize(true)
@@ -42,9 +43,9 @@ class ResultsFragment: Fragment(R.layout.results_fragment), RecyclerAdapter.onRe
     }
 
     override fun onRecipeClick(position: Int) {
-        Toast.makeText(activityRetriever,
-            mvm.getRecipeHolder()?.get(position)?.recipe?.label, Toast.LENGTH_LONG).show()
-            mvm.setClickedRecipe(mvm.getRecipeHolder()?.get(position)?.recipe)
+//        Toast.makeText(activityRetriever,
+//            mvm.getRecipeHolder()?.get(position)?.recipe?.label, Toast.LENGTH_LONG).show()
+        mvm.setClickedRecipe(mvm.getRecipeHolder()?.get(position)?.recipe)
         view?.findNavController()?.navigate(R.id.detailsFragment)
 
     }

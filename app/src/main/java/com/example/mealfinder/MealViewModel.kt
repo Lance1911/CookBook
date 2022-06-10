@@ -10,41 +10,52 @@ class MealViewModel: ViewModel() {
     private var r: Recipe? = null
     private var mealCount: MutableLiveData<Int> = MutableLiveData(mc)
     private var recipes: List<Hit> = listOf()
+    private var search: String = ""
     private var recipeHolder: MutableLiveData<List<Hit>> = MutableLiveData<List<Hit>>(recipes)
     private var selectHolder: MutableLiveData<Recipe?> = MutableLiveData<Recipe?>(r)
+    private var searchHolder: MutableLiveData<String> = MutableLiveData<String>(search)
 
-    public fun incrementMealCount() {
+    fun setSearch(searchValue: String) {
+        search = searchValue
+        searchHolder.value = search
+    }
+
+    fun getSearch(): String? {
+        return searchHolder.value
+    }
+
+    fun incrementMealCount() {
         this.mc++
         mealCount.value = mc
     }
 
-    public fun decrementMealCount() {
+    fun decrementMealCount() {
         this.mc--
         mealCount.value = mc
     }
 
-    public fun getMealCount(): Int? {
+    fun getMealCount(): Int? {
         return mealCount.value
     }
 
-    public fun setRecipeHolder(results: List<Hit>?) {
-        recipeHolder.value = results
+    fun setRecipeHolder(results: List<Hit>?) {
+        recipeHolder.value = results!!
     }
 
-    public fun getRecipeHolder(): List<Hit>? {
+    fun getRecipeHolder(): List<Hit>? {
         return this.recipeHolder.value
     }
 
-    public fun getRecipeHolderSize(): Int {
+    fun getRecipeHolderSize(): Int {
         return this.recipes.size
     }
 
-    public fun setClickedRecipe(rcp: Recipe?) {
+    fun setClickedRecipe(rcp: Recipe?) {
         this.r = rcp
         this.selectHolder = MutableLiveData<Recipe?>(this.r)
     }
 
-    public fun getClickedRecipe(): Recipe? {
+    fun getClickedRecipe(): Recipe? {
         return this.selectHolder.value
     }
 

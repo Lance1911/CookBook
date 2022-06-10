@@ -78,12 +78,11 @@ class MainFragment: Fragment(R.layout.main_fragment) {
             checkBoxes[i].cb.setOnClickListener {
 
                 // If the checkbox chosen is one of the four meal types
-                if (checkBoxes[i].linkText == "&mealType=Breakfast" || checkBoxes[i].linkText == "&mealType=Lunch" ||
-                    checkBoxes[i].linkText == "&mealType=Dinner" || checkBoxes[i].linkText == "&mealType=Snack") {
+                if (checkBoxes[i].linkText.equals("&mealType=Breakfast") || checkBoxes[i].linkText.equals("&mealType=Lunch") ||
+                    checkBoxes[i].linkText.equals("&mealType=Dinner") || checkBoxes[i].linkText.equals("&mealType=Snack")) {
 
                         // ensures only one type of meal can be selected
                     if (mealCount < 1) {
-                        Log.e("Meal Count", mealCount.toString())
                         urlBuilder.add(checkBoxes[i].linkText)
                         mealTypes.add(choices[i].linkText)
                         mealCount++
@@ -92,7 +91,6 @@ class MainFragment: Fragment(R.layout.main_fragment) {
                     // Removes a selected meal type by pressing the selected meal a second time
                     else if (mealCount > 0) {
                         if (!checkBoxes[i].cb.isChecked) {
-                            Log.e("Condition 1", "Entered")
                             urlBuilder.remove(checkBoxes[i].linkText)
                             mealTypes.remove(choices[i].linkText)
                             mealCount--
@@ -105,7 +103,6 @@ class MainFragment: Fragment(R.layout.main_fragment) {
 
                         // Enforces the one meal rule
                         else {
-                            Log.e("Condition 2", "Entered")
                             checkBoxes[i].cb.isChecked = false
                             Toast.makeText(
                                 activityRetriever,
@@ -122,7 +119,6 @@ class MainFragment: Fragment(R.layout.main_fragment) {
 
                     // Deselecting a non mealtype checkbox
                     if (!checkBoxes[i].cb.isChecked) {
-                        Log.e("Condition 1", "Entered")
                         urlBuilder.remove(checkBoxes[i].linkText)
                         if (checkBoxes[i].linkText[1] == 'h') healthTypes.remove(choices[i].linkText)
                         if (checkBoxes[i].linkText[1] == 'd') dietTypes.remove(choices[i].linkText)
@@ -144,14 +140,17 @@ class MainFragment: Fragment(R.layout.main_fragment) {
         }
 
         beginSearch.setOnClickListener {
+            beginSearch.text = "Searching..."
             for (i in 0 until urlBuilder.size) {
                 newURL += urlBuilder[i]
             }
             if (foodQuery.text.toString().isEmpty()) {
+                beginSearch.text = "Begin Search"
                 Toast.makeText(activityRetriever, "Please type a search query", Toast.LENGTH_LONG).show()
             }
             else {
                 newURL += "&q="
+                mvm.setSearch(foodQuery.text.toString())
                 for (i in 0 until foodQuery.text.toString().length) {
                     if (foodQuery.text.toString()[i] == ' ') {
                         newURL += "%20"
@@ -176,11 +175,17 @@ class MainFragment: Fragment(R.layout.main_fragment) {
 
                         var recipeObj: RecipeObject? = response.body()
                         mvm.setRecipeHolder(recipeObj?.hits)
-                        view?.findNavController().navigate(R.id.resultsFragment)
-                    }
+                        if (recipeObj?.hits?.size!! > 0) {
+                            view?.findNavController().navigate(R.id.resultsFragment)
 
+                        }
+                        else {
+                            beginSearch.text = "Begin Search"
+                            Toast.makeText(activityRetriever, "Your search returned no results.", Toast.LENGTH_LONG).show()
+                        }
+                    }
                     override fun onFailure(call: Call<RecipeObject>, t: Throwable) {
-                        t.message?.let { Log.e("LOSER", it) }
+                        t.message?.let { Log.e("FAILED", it) }
                     }
                 })
 

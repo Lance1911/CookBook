@@ -1,133 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailsFragment"
-    tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="1dp">
+    tools:context=".DetailsFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/edamamLogo"
-            android:layout_width="260dp"
-            android:layout_height="62dp"
-            android:translationX="3dp"
-            android:translationY="-3425dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recTitle"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/recipeLink"
-            android:layout_width="308dp"
-            android:layout_height="51dp"
-            android:fontFamily="sans-serif-light"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:translationY="-4115dp"
-            app:layout_constraintBottom_toTopOf="@+id/edamamLogo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider4" />
+            <TextView
+                android:id="@+id/recTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                app:fontFamily="sans-serif-medium" />
 
-        <TextView
-            android:id="@+id/recTitle"
-            android:layout_width="370dp"
-            android:layout_height="90dp"
-            android:ellipsize="none"
-            android:fontFamily="sans-serif-light"
-            android:scrollHorizontally="false"
-            android:text="TextView"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:translationY="-2590dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50px" />
 
-        <ImageView
-            android:id="@+id/recPicture"
-            android:layout_width="365dp"
-            android:layout_height="217dp"
-            android:translationX="3dp"
-            android:translationY="-3760dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recTitle"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            <ImageView
+                android:id="@+id/recPicture"
+                android:layout_width="338dp"
+                android:layout_height="194dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                tools:src="@tools:sample/avatars" />
 
-        <TextView
-            android:id="@+id/ingredients"
-            android:layout_width="319dp"
-            android:layout_height="1083dp"
-            android:padding="20dp"
-            android:text="TextView"
-            android:textSize="16sp"
-            android:translationY="-3400dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recPicture" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="100px" />
 
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="0dp"
-            android:layout_height="49dp"
-            android:fontFamily="sans-serif-light"
-            android:text="Ingredients:"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:translationY="-3425dp"
-            app:layout_constraintBottom_toTopOf="@+id/ingredients"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recPicture" />
+            <View
+                android:id="@+id/divider3"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="309dp"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
 
-        <View
-            android:id="@+id/divider3"
-            android:layout_width="409dp"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            android:foregroundGravity="center"
-            android:translationY="-3740dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView13"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recPicture" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50px" />
 
-        <View
-            android:id="@+id/divider4"
-            android:layout_width="409dp"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            android:foregroundGravity="center"
-            android:translationY="-4600dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ingredients" />
+            <TextView
+                android:id="@+id/ing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:text="Ingredients:"
+                android:textSize="18sp"
+                app:fontFamily="sans-serif-light" />
 
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="308dp"
-            android:layout_height="51dp"
-            android:fontFamily="sans-serif-light"
-            android:text="Recipe Link:"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:translationY="-4850dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider4" />
+            <TextView
+                android:id="@+id/ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="TextView"
+                app:fontFamily="sans-serif-light" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50px" />
+
+            <View
+                android:id="@+id/divider4"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="309dp"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50px" />
+
+            <Button
+                android:id="@+id/webViewButton"
+                android:layout_width="276dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="View Recipe" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50px" />
+
+            <ImageView
+                android:id="@+id/edamamLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/edamam" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

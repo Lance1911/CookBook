@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ljsag/AndroidStudioProjects/CookBook/app/src/main/res/layout-land/recipe_web_view.xml" value="0.13756613756613756" />
+        <entry key="..\:/Users/ljsag/AndroidStudioProjects/CookBook/app/src/main/res/layout-land/results_fragment.xml" value="0.15873015873015872" />
         <entry key="..\:/Users/ljsag/AndroidStudioProjects/CookBook/app/src/main/res/layout/activity_main.xml" value="0.1816123188405797" />
-        <entry key="..\:/Users/ljsag/AndroidStudioProjects/CookBook/app/src/main/res/layout/details_fragment.xml" value="0.18" />
+        <entry key="..\:/Users/ljsag/AndroidStudioProjects/CookBook/app/src/main/res/layout/details_fragment.xml" value="0.25" />
         <entry key="..\:/Users/ljsag/AndroidStudioProjects/CookBook/app/src/main/res/layout/main_fragment.xml" value="0.23340040241448692" />
-        <entry key="..\:/Users/ljsag/AndroidStudioProjects/CookBook/app/src/main/res/layout/recipe_item.xml" value="0.19791666666666666" />
-        <entry key="..\:/Users/ljsag/AndroidStudioProjects/CookBook/app/src/main/res/layout/results_fragment.xml" value="0.1816123188405797" />
+        <entry key="..\:/Users/ljsag/AndroidStudioProjects/CookBook/app/src/main/res/layout/recipe_item.xml" value="0.25" />
+        <entry key="..\:/Users/ljsag/AndroidStudioProjects/CookBook/app/src/main/res/layout/recipe_web_view.xml" value="0.18115942028985507" />
+        <entry key="..\:/Users/ljsag/AndroidStudioProjects/CookBook/app/src/main/res/layout/results_fragment.xml" value="0.2" />
         <entry key="..\:/Users/ljsag/AndroidStudioProjects/MealFinder - Copy/app/src/main/res/layout/activity_main.xml" value="0.1897644927536232" />
         <entry key="..\:/Users/ljsag/AndroidStudioProjects/MealFinder - Copy/app/src/main/res/layout/main_fragment.xml" value="0.1897644927536232" />
         <entry key="..\:/Users/ljsag/AndroidStudioProjects/MealFinder - Copy/app/src/main/res/layout/results_fragment.xml" value="0.1897644927536232" />

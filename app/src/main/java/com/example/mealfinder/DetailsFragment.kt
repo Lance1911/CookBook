@@ -31,7 +31,9 @@ class DetailsFragment: Fragment(R.layout.details_fragment) {
             ingrdnts += mvm.getClickedRecipe()?.ingredients?.get(i)?.text + "\n"
         }
         ingredients.text = ingrdnts
-        recipeLink.text = mvm.getClickedRecipe()?.url
         edamamLogo.setImageResource(R.drawable.eda)
+        webViewButton.setOnClickListener {
+            view?.findNavController().navigate(R.id.recipeWebView)
+        }
     }
 }

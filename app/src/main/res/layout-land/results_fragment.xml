@@ -7,30 +7,30 @@
     android:layout_height="match_parent"
     tools:context=".ResultsFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="412dp"
-        android:layout_height="681dp"
-        android:paddingBottom="?attr/actionBarSize"
-        android:translationY="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.238"
-        tools:listitem="@layout/recipe_item" />
-
     <TextView
         android:id="@+id/SearchResults"
-        android:layout_width="362dp"
-        android:layout_height="50dp"
+        android:layout_width="676dp"
+        android:layout_height="58dp"
         android:text="TextView"
         android:textSize="18sp"
-        app:fontFamily="sans-serif-light"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="404dp"
+        android:layout_height="329dp"
+        android:paddingBottom="?attr/actionBarSize"
+        android:translationY="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.341"
+        tools:listitem="@layout/recipe_item" />
 </androidx.constraintlayout.widget.ConstraintLayout>
